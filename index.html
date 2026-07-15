@@ -3,118 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ADD - Asociación para el Desarrollo Departamental</title>
+
+<title>ADD | Asociación para el Desarrollo Departamental</title>
 
 <style>
+
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
     color:#333;
+    background:#f4f7f9;
 }
+
 header{
-    background:#009BDB;
-    color:white;
+    min-height:90vh;
+    background:linear-gradient(rgba(0,91,150,.85),rgba(0,155,219,.85)),
+    url("https://images.unsplash.com/photo-1521791136064-7986c2920216");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:60px 20px;
-}
-header h1{
-    margin:0;
-    font-size:40px;
-}
-header p{
-    font-size:20px;
-}
-nav{
-    background:#005B96;
-    padding:15px;
-    text-align:center;
-}
-nav a{
     color:white;
+    padding:30px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:25px;
+}
+
+.boton{
+    display:inline-block;
+    margin-top:30px;
+    background:white;
+    color:#005b96;
+    padding:15px 30px;
+    border-radius:30px;
     text-decoration:none;
-    margin:15px;
     font-weight:bold;
 }
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+
+nav{
+    position:sticky;
+    top:0;
+    background:#005b96;
+    padding:15px;
+    text-align:center;
+    z-index:10;
 }
+
+nav a{
+    color:white;
+    margin:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.titulo{
+    text-align:center;
+    color:#005b96;
+    font-size:35px;
+}
+
+.tarjetas{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
 .card{
     background:white;
+    width:300px;
     padding:25px;
-    border-radius:10px;
-    margin-bottom:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    border-radius:15px;
+    box-shadow:0 5px 15px #ddd;
 }
+
+.card h3{
+    color:#009bdb;
+}
+
 footer{
     background:#222;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
 }
-button{
-    background:#009BDB;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:8px;
-    font-size:18px;
-    cursor:pointer;
+
+
+@media(max-width:700px){
+
+.hero h1{
+    font-size:38px;
 }
-button:hover{
-    background:#0077aa;
+
+nav a{
+    display:block;
+    margin:10px;
 }
+
+}
+
 </style>
 
 </head>
+
+
 <body>
 
+
 <header>
+
+<div class="hero">
+
 <h1>ADD</h1>
+
 <p>Asociación para el Desarrollo Departamental</p>
-<p>Impulsando tu crecimiento</p>
 
-<button>Solicitar Financiamiento</button>
+<p><b>Impulsando tu crecimiento</b></p>
 
-</header>
-
-<nav>
-<a href="#">Inicio</a>
-<a href="#">Quiénes Somos</a>
-<a href="#">Financiamiento</a>
-<a href="#">Noticias</a>
-<a href="#">Contacto</a>
-</nav>
-
-<section>
-
-<div class="card">
-<h2>Bienvenidos</h2>
-
-<p>
-La Asociación para el Desarrollo Departamental impulsa el crecimiento de
-emprendedores, empresas, municipios y comunas mediante líneas de financiamiento
-y programas de desarrollo.
-</p>
+<a class="boton" href="#">Solicitar Financiamiento</a>
 
 </div>
 
-<div class="card">
-<h2>Líneas disponibles</h2>
+</header>
 
-<ul>
-<li>Capital de Trabajo</li>
-<li>Inversión Productiva</li>
-<li>Agro Tecnología</li>
-<li>Transición Energética</li>
-<li>Turismo Regional</li>
-</ul>
+
+
+<nav>
+
+<a href="#nosotros">Nosotros</a>
+
+<a href="#financiamiento">Financiamiento</a>
+
+<a href="#noticias">Noticias</a>
+
+<a href="#contacto">Contacto</a>
+
+</nav>
+
+
+
+
+<section id="nosotros">
+
+<h2 class="titulo">¿Quiénes somos?</h2>
+
+<p>
+La Asociación para el Desarrollo Departamental trabaja acompañando a emprendedores,
+monotributistas, Pymes, municipios y comunas del Departamento San Martín,
+promoviendo herramientas de financiamiento y desarrollo productivo.
+</p>
+
+</section>
+
+
+
+
+<section id="financiamiento">
+
+<h2 class="titulo">Líneas de financiamiento</h2>
+
+
+<div class="tarjetas">
+
+
+<div class="card">
+<h3>Capital de Trabajo</h3>
+<p>Financiamiento para fortalecer la actividad diaria de emprendedores y empresas.</p>
+</div>
+
+
+<div class="card">
+<h3>Inversión Productiva</h3>
+<p>Herramientas para crecer, incorporar tecnología y mejorar procesos.</p>
+</div>
+
+
+<div class="card">
+<h3>Agro Tecnología</h3>
+<p>Soluciones financieras para el desarrollo del sector agropecuario.</p>
+</div>
+
+
+<div class="card">
+<h3>Transición Energética</h3>
+<p>Apoyo a proyectos de eficiencia y energías renovables.</p>
+</div>
+
+
+<div class="card">
+<h3>Turismo Regional</h3>
+<p>Impulso a proyectos turísticos del Departamento San Martín.</p>
+</div>
+
 
 </div>
 
 </section>
+
+
+
+
+<section id="noticias">
+
+<h2 class="titulo">Noticias</h2>
+
+<div class="card">
+
+<h3>Actualidad ADD</h3>
+
+<p>
+Próximamente encontrará aquí todas las novedades,
+convenios y programas de la Asociación.
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<section id="contacto">
+
+<h2 class="titulo">Contacto</h2>
+
+<p>
+📍 Departamento San Martín - Santa Fe
+</p>
+
+<p>
+📲 WhatsApp: próximamente
+</p>
+
+<p>
+📧 Email: próximamente
+</p>
+
+
+</section>
+
+
+
 
 <footer>
 
@@ -122,5 +271,7 @@ y programas de desarrollo.
 
 </footer>
 
+
 </body>
+
 </html>
