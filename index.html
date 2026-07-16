@@ -189,7 +189,25 @@ section{
 .banners img:hover{
     transform:scale(1.05);
 }
+#visor{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.85);
+    justify-content:center;
+    align-items:center;
+    z-index:100;
+}
 
+#visor img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+}
+    
 footer{
     background:#222;
     color:white;
@@ -214,7 +232,21 @@ nav a{
 
 </head>
 
+<div id="visor" onclick="cerrarImagen()">
+    <img id="imagenGrande">
+</div>
 
+<script>
+function abrirImagen(src){
+    document.getElementById("visor").style.display="flex";
+    document.getElementById("imagenGrande").src=src;
+}
+
+function cerrarImagen(){
+    document.getElementById("visor").style.display="none";
+}
+</script>
+    
 <body>
 
 
@@ -222,7 +254,11 @@ nav a{
 
 <div class="hero">
 
-<img src="logo-add.png.jpeg" class="logo" alt="Logo ADD">
+<img src="oficina-add.jpg" alt="Oficina ADD" onclick="abrirImagen(this.src)">
+
+<img src="oficina-add-2.jpg" alt="Oficina ADD" onclick="abrirImagen(this.src)">
+
+<img src="oficina-add-3.jpg" alt="Oficina ADD" onclick="abrirImagen(this.src)">
 
 <p style="color:#00b86b;font-weight:bold;letter-spacing:2px;">
 DESARROLLO • FINANCIAMIENTO • CRECIMIENTO
@@ -340,13 +376,13 @@ Línea de financiamiento con tasa bonificada para monotributistas, pequeñas y m
 
 <div class="banners">
 
-<img src="add-agroactiva.jpg" alt="ADD en AgroActiva">
+<img src="add-agroactiva.jpg" alt="ADD en AgroActiva" onclick="abrirImagen(this.src)">
 
-<img src="add-presentacion.jpg" alt="Presentación ADD">
+<img src="add-presentacion.jpg" alt="Presentación ADD" onclick="abrirImagen(this.src)">
 
-<img src="banner-estructura.jpeg" alt="Estructura ADD">
+<img src="add-estructura.jpeg" alt="Estructura ADD" onclick="abrirImagen(this.src)">
 
-<img src="add-institucion.jpg" alt="ADD Institucional">
+<img src="add-institucion.jpg" alt="ADD Institucional" onclick="abrirImagen(this.src)">
 
 </div>
 
