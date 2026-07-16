@@ -170,18 +170,21 @@ section{
 }
 footer{
     .noticias{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
     margin-top:40px;
 }
 
 .noticia{
+    width:320px;
     background:white;
     border-radius:15px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
     transition:.3s;
+    margin:auto;
 }
 
 .noticia:hover{
@@ -190,7 +193,7 @@ footer{
 
 .noticia img{
     width:100%;
-    height:220px;
+    height:180px;
     object-fit:cover;
 }
 
