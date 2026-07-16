@@ -169,6 +169,51 @@ section{
     transform:scale(1.05);
 }
 footer{
+    .noticias{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.noticia{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.noticia:hover{
+    transform:translateY(-6px);
+}
+
+.noticia img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.noticia h3{
+    color:#005b96;
+    padding:20px 20px 10px;
+}
+
+.noticia p{
+    padding:0 20px 20px;
+    line-height:1.6;
+}
+
+.noticia a{
+    display:inline-block;
+    margin:0 20px 20px;
+    background:#009BDB;
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+}
     background:#222;
     color:white;
     text-align:center;
@@ -251,24 +296,7 @@ Solicitá asesoramiento
 
 
 
-
-<h2 class="titulo">Conocé nuestra sede</h2>
-
-<p style="text-align:center;">
-Nuestra sede administrativa está ubicada en J. F. Seguí 960, donde brindamos atención, asesoramiento y acompañamiento a emprendedores, empresas, municipios y comunas del Departamento San Martín.
-</p>
-
-<div class="galeria">
-
-<img src="oficina-add.jpg" alt="Oficina ADD">
-
-<img src="oficina-add-2.jpg" alt="Oficina ADD">
-
-<img src="oficina-add-3.jpg" alt="Oficina ADD">
-
-</div>
-
-</section>
+    
 <section id="nosotros">
 
 <h2 class="titulo">¿Quiénes somos?</h2>
@@ -334,15 +362,40 @@ Línea de financiamiento con tasa bonificada para monotributistas, pequeñas y m
 
 <h2 class="titulo">Noticias</h2>
 
-<div class="card">
+<div class="noticias">
 
-<h3>Nuevas líneas de financiamiento</h3>
+<div class="noticia">
+<img src="add-agroactiva.jpg" alt="ADD en AgroActiva">
+
+<h3>ADD presente en AgroActiva</h3>
 
 <p>
-La Asociación para el Desarrollo Departamental continúa gestionando nuevas herramientas financieras para emprendedores, empresas, municipios y comunas.
-
-Próximamente se informarán novedades sobre líneas de Capital de Trabajo, Inversión Productiva, Agro Tecnología, Turismo Regional y Transición Energética.
+La Asociación participó de AgroActiva difundiendo sus herramientas de financiamiento y acompañando el desarrollo productivo del Departamento San Martín.
 </p>
+
+</div>
+
+<div class="noticia">
+<img src="add-presentacion.jpg" alt="Presentación ADD">
+
+<h3>Presentación Institucional</h3>
+
+<p>
+Conocé la misión, los objetivos y las acciones que lleva adelante la Asociación para fortalecer el crecimiento regional.
+</p>
+
+</div>
+
+<div class="noticia">
+<img src="add-institucion.jpg" alt="Institución">
+
+<h3>Desarrollo Departamental</h3>
+
+<p>
+Trabajamos junto a emprendedores, empresas, municipios y comunas generando oportunidades para toda la región.
+</p>
+
+</div>
 
 </div>
 
@@ -357,7 +410,7 @@ Próximamente se informarán novedades sobre líneas de Capital de Trabajo, Inve
 <h2 class="titulo">Contacto</h2>
 
 <p>
-📍 J. F. Seguí 960 - El Trebol, Santa Fe
+📍 J. F. Seguí 960 - El Trébol, Santa Fe
 </p>
 
 <p>
