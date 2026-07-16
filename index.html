@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -51,46 +52,33 @@ header::after{
     font-size:25px;
     color:#555;
 }
+
 .logo{
     width:230px;
     margin-bottom:30px;
 }
 
 .subtitulo{
-
-max-width:700px;
-
-margin:auto;
-
-line-height:1.6;
-
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
 }
 
 .botones{
-
-margin-top:35px;
-
+    margin-top:35px;
 }
 
 .boton2{
-
-display:inline-block;
-
-margin-left:15px;
-
-padding:15px 30px;
-
-background:#00b86b;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:30px;
-
-font-weight:bold;
-
+    display:inline-block;
+    margin-left:15px;
+    padding:15px 30px;
+    background:#00b86b;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
 }
+
 .boton{
     display:inline-block;
     margin-top:30px;
@@ -148,6 +136,7 @@ section{
 .card h3{
     color:#009bdb;
 }
+
 .galeria{
     display:flex;
     flex-wrap:wrap;
@@ -163,6 +152,7 @@ section{
     border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,.2);
     transition:.3s;
+    cursor:pointer;
 }
 
 .galeria img:hover{
@@ -184,11 +174,13 @@ section{
     border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,.2);
     transition:.3s;
+    cursor:pointer;
 }
 
 .banners img:hover{
     transform:scale(1.05);
 }
+
 #visor{
     display:none;
     position:fixed;
@@ -207,7 +199,7 @@ section{
     max-height:90%;
     border-radius:15px;
 }
-    
+
 footer{
     background:#222;
     color:white;
@@ -232,11 +224,15 @@ nav a{
 
 </head>
 
+<body>
+
 <div id="visor" onclick="cerrarImagen()">
     <img id="imagenGrande">
 </div>
 
+
 <script>
+
 function abrirImagen(src){
     document.getElementById("visor").style.display="flex";
     document.getElementById("imagenGrande").src=src;
@@ -245,32 +241,36 @@ function abrirImagen(src){
 function cerrarImagen(){
     document.getElementById("visor").style.display="none";
 }
+
 </script>
-    
-<body>
 
 
 <header>
 
 <div class="hero">
 
+<img src="logo-add.png.jpeg" class="logo" alt="Logo ADD">
 
 
 <p style="color:#00b86b;font-weight:bold;letter-spacing:2px;">
 DESARROLLO • FINANCIAMIENTO • CRECIMIENTO
 </p>
 
+
 <h1>Asociación para el Desarrollo Departamental</h1>
+
 
 <p class="subtitulo">
 Impulsando el crecimiento de emprendedores, empresas, Municipios y Comunas del Departamento San Martín.
 </p>
+
 
 <div class="botones">
 
 <a class="boton" href="#financiamiento">
 Conocé nuestras líneas
 </a>
+
 
 <a class="boton2"
 href="https://wa.me/5493401433139"
@@ -302,9 +302,6 @@ Solicitá asesoramiento
 
 
 
-
-
-    
 <section id="nosotros">
 
 <h2 class="titulo">¿Quiénes somos?</h2>
@@ -317,6 +314,8 @@ promoviendo herramientas de financiamiento y desarrollo productivo.
 
 </section>
 
+
+
 <section id="oficina">
 
 <h2 class="titulo">Conocé nuestra sede</h2>
@@ -325,13 +324,14 @@ promoviendo herramientas de financiamiento y desarrollo productivo.
 Nuestra sede administrativa está ubicada en J. F. Seguí 960, El Trébol, donde brindamos atención, asesoramiento y acompañamiento a emprendedores, empresas, municipios y comunas del Departamento San Martín.
 </p>
 
+
 <div class="galeria">
 
-<img src="oficina-add.jpg" alt="Oficina ADD">
+<img src="oficina-add.jpg" alt="Oficina ADD" onclick="abrirImagen(this.src)">
 
-<img src="oficina-add-2.jpg" alt="Oficina ADD">
+<img src="oficina-add-2.jpg" alt="Oficina ADD" onclick="abrirImagen(this.src)">
 
-<img src="oficina-add-3.jpg" alt="Oficina ADD">
+<img src="oficina-add-3.jpg" alt="Oficina ADD" onclick="abrirImagen(this.src)">
 
 </div>
 
@@ -343,21 +343,33 @@ Nuestra sede administrativa está ubicada en J. F. Seguí 960, El Trébol, donde
 
 <h2 class="titulo">Líneas de financiamiento</h2>
 
+
 <div class="tarjetas">
 
-<div class="card">
-<h3>🌱 Red Emprendedores</h3>
-<p>
-Financiamiento destinado a emprendedores para impulsar nuevos proyectos, fortalecer emprendimientos existentes y promover el desarrollo local.
-</p>
-</div>
 
 <div class="card">
-<h3>🏦 Línea Tasa Subsidiada - Banco Municipal de Rosario</h3>
+
+<h3>🌱 Red Emprendedores</h3>
+
 <p>
-Línea de financiamiento con tasa bonificada para monotributistas, pequeñas y medianas empresas, destinada a potenciar la inversión y el crecimiento productivo.
+Financiamiento destinado a emprendedores para impulsar nuevos proyectos,
+fortalecer emprendimientos existentes y promover el desarrollo local.
 </p>
+
 </div>
+
+
+<div class="card">
+
+<h3>🏦 Línea Tasa Subsidiada - Banco Municipal de Rosario</h3>
+
+<p>
+Línea de financiamiento con tasa bonificada para monotributistas,
+pequeñas y medianas empresas, destinada a potenciar la inversión y el crecimiento productivo.
+</p>
+
+</div>
+
 
 </div>
 
@@ -370,15 +382,33 @@ Línea de financiamiento con tasa bonificada para monotributistas, pequeñas y m
 
 <h2 class="titulo">Noticias</h2>
 
+
 <div class="banners">
 
-<img src="add-agroactiva.jpg" alt="ADD en AgroActiva" onclick="abrirImagen(this.src)">
 
-<img src="add-presentacion.jpg" alt="Presentación ADD" onclick="abrirImagen(this.src)">
+<img src="add-agroactiva.jpg" 
+alt="ADD en AgroActiva"
+onclick="abrirImagen(this.src)">
 
-<img src="add-estructura.jpeg" alt="Estructura ADD" onclick="abrirImagen(this.src)">
 
-<img src="add-institucion.jpg" alt="ADD Institucional" onclick="abrirImagen(this.src)">
+
+<img src="add-presentacion.jpg" 
+alt="Presentación ADD"
+onclick="abrirImagen(this.src)">
+
+
+
+<img src="add-estructura.jpeg" 
+alt="Estructura ADD"
+onclick="abrirImagen(this.src)">
+
+
+
+<img src="add-institucion.jpg" 
+alt="ADD Institucional"
+onclick="abrirImagen(this.src)">
+
+
 
 </div>
 
@@ -392,23 +422,29 @@ Línea de financiamiento con tasa bonificada para monotributistas, pequeñas y m
 
 <h2 class="titulo">Contacto</h2>
 
+
 <p>
 📍 J. F. Seguí 960 - El Trébol, Santa Fe
 </p>
+
 
 <p>
 📲 WhatsApp: 3401-433139
 </p>
 
+
 <p>
 📧 asociacionparaeldesarrollosm@gmail.com
 </p>
 
+
 <p>
 📷 Instagram:
+
 <a href="https://instagram.com/add.dptosanmartin" target="_blank">
 @add.dptosanmartin
 </a>
+
 </p>
 
 
@@ -416,10 +452,9 @@ Línea de financiamiento con tasa bonificada para monotributistas, pequeñas y m
 
 
 
-
 <footer>
 
-© 2026 Asociación para el Desarrollo Departamental
+©️ 2026 Asociación para el Desarrollo Departamental
 
 </footer>
 
