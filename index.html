@@ -212,22 +212,20 @@ section{
 }
     
 .misionvision{
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
     gap:20px;
-    justify-content:center;
-    align-items:stretch;   /* todas la misma altura */
-    margin-top:35px;
+    margin-top:40px;
 }
 
 .mv-card{
-    width:460px;           /* un poco más chicas */
-    min-height:320px;      /* misma altura para las 4 */
     background:white;
     padding:25px;
     border-radius:16px;
     box-shadow:0 6px 18px rgba(0,0,0,.12);
-    transition:all .3s ease;
+    min-height:380px;
+    display:flex;
+    flex-direction:column;
 }
 
 .mv-card:hover{
@@ -243,9 +241,10 @@ section{
     font-size:24px;
 }
 
-.mv-card h3{
-    color:#005b96;
-    text-align:center;
+@media(max-width:700px){
+    .misionvision{
+        grid-template-columns:1fr;
+    }
 }
 footer{
     background:#222;
@@ -350,16 +349,12 @@ Solicitá asesoramiento
 </nav>
 
 
-
 <section id="nosotros">
 
 <h2 class="titulo">¿Quiénes somos?</h2>
 
 <p style="text-align:center; max-width:800px; margin:auto; line-height:1.6;">
-
-Somos una asociacion civil con integracion publico privado que buscar fortalecer el crecimiento y el desarrollo
-de los miembros que la integran, acompañando a emprendedores, monotributistas, pyme, empresas, Municipios y Comunas
-con un crecimiento sostenible    
+Somos una asociación civil con integración público-privada que busca fortalecer el crecimiento y el desarrollo de quienes la integran, acompañando a emprendedores, monotributistas, Pymes, empresas, Municipios y Comunas mediante herramientas de financiamiento y desarrollo sostenible.
 </p>
 
 <div class="misionvision">
@@ -370,10 +365,12 @@ con un crecimiento sostenible
 
 <p style="text-align:center; line-height:1.8;">
 <b>Presidente</b><br>
-Juan Pablo Pellegrino<br><br>
+Juan Pablo Pellegrino
+<br><br>
 
 <b>Tesorero</b><br>
-Ariel Martini<br><br>
+Ariel Martini
+<br><br>
 
 <b>Secretaria</b><br>
 Natalia Sánchez
@@ -385,22 +382,19 @@ Natalia Sánchez
 
 <h3>👥 Nuestro Equipo de Trabajo</h3>
 
-<p style="text-align:center; line-height:1.7;">
-
+<p style="line-height:1.7; text-align:center;">
 <b>Maximiliano Valdez</b><br>
-Administración y Gestión Institucional<br>
-Coordinación administrativa, gestión de programas y financiamiento, seguimiento de proyectos, asistencia a municipios y comunas, y articulación con organismos provinciales y entidades financieras.<br><br>
+Administración General.<br>
+Coordinación administrativa, gestión institucional, programas de financiamiento, seguimiento de proyectos y articulación con organismos públicos, entidades financieras, municipios y comunas.
+
+<br><br>
 
 <b>Marcos Magnago</b><br>
-Coordinación de Programas y Financiamiento<br>
-Asesoramiento a emprendedores y empresas, formulación y seguimiento de proyectos productivos, gestión de líneas de crédito y acompañamiento técnico durante los procesos de financiamiento.
-
+Coordinación Técnica.<br>
+Asesoramiento a emprendedores y empresas, formulación y evaluación de proyectos, gestión de líneas de financiamiento y acompañamiento técnico.
 </p>
 
 </div>
-
-</div>
-<div class="misionvision">
 
 <div class="mv-card">
 
@@ -423,6 +417,7 @@ Ser la institución de referencia para el desarrollo departamental, impulsando u
 </div>
 
 </div>
+
 </section>
 
 <section id="servicios">
