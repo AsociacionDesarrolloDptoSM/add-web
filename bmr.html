@@ -124,7 +124,42 @@ footer{
 
 </head>
 
+<script>
 
+function enviarWhatsapp(){
+
+let nombre=document.getElementById("nombre").value;
+let dni=document.getElementById("dni").value;
+let localidad=document.getElementById("localidad").value;
+let telefono=document.getElementById("telefono").value;
+let email=document.getElementById("email").value;
+let empresa=document.getElementById("empresa").value;
+let actividad=document.getElementById("actividad").value;
+let antiguedad=document.getElementById("antiguedad").value;
+let monto=document.getElementById("monto").value;
+let destino=document.getElementById("destino").value;
+let proyecto=document.getElementById("proyecto").value;
+
+let mensaje=
+"Hola ADD, quiero solicitar asesoramiento para la Línea de Financiamiento con Tasa Subsidiada ADD - Banco Municipal.%0A%0A"+
+"*Nombre:* "+nombre+"%0A"+
+"*DNI/CUIT:* "+dni+"%0A"+
+"*Localidad:* "+localidad+"%0A"+
+"*Teléfono:* "+telefono+"%0A"+
+"*Email:* "+email+"%0A"+
+"*Empresa/Emprendimiento:* "+empresa+"%0A"+
+"*Actividad:* "+actividad+"%0A"+
+"*Antigüedad:* "+antiguedad+"%0A"+
+"*Monto solicitado:* $"+monto+"%0A"+
+"*Destino:* "+destino+"%0A"+
+"*Proyecto:* "+proyecto;
+
+window.open("https://wa.me/5493401433139?text="+mensaje,"_blank");
+
+}
+
+</script>
+    
 <body>
 
 
@@ -186,45 +221,45 @@ Esta herramienta está destinada a emprendedores, monotributistas y pequeñas em
 
 
 <label>Nombre y Apellido</label>
-<input type="text">
+<input type="text" id="nombre">
 
 
 <label>DNI / CUIT</label>
-<input type="text">
+<input type="text" id="dni">
 
 
 <label>Localidad</label>
-<input type="text">
+<input type="text" id="localidad">
 
 
 <label>Teléfono</label>
-<input type="tel">
+<input type="tel" id="telefono">
 
 
 <label>Correo electrónico</label>
-<input type="email">
+<input type="email" id="email">
 
 
 <label>Nombre del emprendimiento o empresa</label>
-<input type="text">
+<input type="text" id="empresa">
 
 
 <label>Actividad principal</label>
-<input type="text">
+<input type="text" id="actividad">
 
 
 <label>Antigüedad del emprendimiento</label>
-<input type="text">
+<input type="text" id="antiguedad">
 
 
 <label>Monto solicitado</label>
-<input type="number">
+<input type="number" id="monto">
 
 
 <label>Destino del financiamiento</label>
 
 
-<select>
+<select id="desrino">
 
 <option>Seleccionar...</option>
 
@@ -243,15 +278,15 @@ Esta herramienta está destinada a emprendedores, monotributistas y pequeñas em
 
 <label>Contanos brevemente sobre tu proyecto</label>
 
-<textarea rows="5"></textarea>
+<textarea id="proyecto" rows="5"></textarea>
 
 
 
 <div class="botones">
 
 
-<a class="boton" 
-href="https://wa.me/5493401433139?text=Hola%20ADD,%20quiero%20asesoramiento%20sobre%20la%20Línea%20de%20Financiamiento%20con%20Tasa%20Subsidiada%20ADD%20-%20Banco%20Municipal."
+<a class="boton"
+href="https://wa.me/5493401433139?text=..."
 target="_blank">
 
 📲 Solicitar asesoramiento por WhatsApp
@@ -269,7 +304,7 @@ target="_blank">
 </div>
 
 
-</form>
+</form id="formulario">
 
 
 </div>
