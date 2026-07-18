@@ -210,21 +210,37 @@ section{
     max-height:90%;
     border-radius:15px;
 }
+    
 .misionvision{
     display:flex;
     flex-wrap:wrap;
     gap:20px;
     justify-content:center;
-    margin-top:40px;
+    align-items:stretch;   /* todas la misma altura */
+    margin-top:35px;
 }
 
 .mv-card{
-    flex:1;
-    min-width:300px;
+    width:460px;           /* un poco más chicas */
+    min-height:320px;      /* misma altura para las 4 */
     background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+    transition:all .3s ease;
+}
+
+.mv-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 24px rgba(0,0,0,.18);
+}
+
+.mv-card h3{
+    color:#005b96;
+    text-align:center;
+    margin-top:0;
+    margin-bottom:18px;
+    font-size:24px;
 }
 
 .mv-card h3{
@@ -369,12 +385,16 @@ Natalia Sánchez
 
 <h3>👥 Nuestro Equipo de Trabajo</h3>
 
-<p style="text-align:center; line-height:1.8;">
+<p style="text-align:center; line-height:1.7;">
+
 <b>Maximiliano Valdez</b><br>
-Administración y Gestión Institucional<br><br>
+Administración y Gestión Institucional<br>
+Coordinación administrativa, gestión de programas y financiamiento, seguimiento de proyectos, asistencia a municipios y comunas, y articulación con organismos provinciales y entidades financieras.<br><br>
 
 <b>Marcos Magnago</b><br>
-Coordinación de Programas y Financiamiento
+Coordinación de Programas y Financiamiento<br>
+Asesoramiento a emprendedores y empresas, formulación y seguimiento de proyectos productivos, gestión de líneas de crédito y acompañamiento técnico durante los procesos de financiamiento.
+
 </p>
 
 </div>
