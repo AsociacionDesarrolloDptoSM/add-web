@@ -23,15 +23,19 @@ body{
 }
     
 header{
-    min-height:85vh;
-    background:white;
+    min-height:90vh;
+    background:
+    radial-gradient(circle at top right, rgba(0,155,219,.12), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(0,184,107,.10), transparent 35%),
+    #ffffff;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:50px 20px;
-    border-top:10px solid #009BDB;
+    padding:80px 20px;
+    border-top:8px solid #009BDB;
     position:relative;
+    overflow:hidden;
 }
 
 header::after{
@@ -44,10 +48,34 @@ header::after{
     background:linear-gradient(90deg,#005b96,#009BDB,#00b86b);
 }
 
+header::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border:2px solid rgba(0,155,219,.08);
+    border-radius:50%;
+    right:-300px;
+    top:-250px;
+}
+
+header::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    border:2px solid rgba(0,184,107,.08);
+    border-radius:50%;
+    left:-250px;
+    bottom:-250px;
+}
+    
 .hero h1{
-    font-size:55px;
-    margin-bottom:10px;
+    font-size:60px;
+    line-height:1.15;
+    margin-bottom:20px;
     color:#005b96;
+    font-weight:800;
 }
 
 .hero p{
@@ -56,8 +84,20 @@ header::after{
 }
 
 .logo{
-    width:230px;
-    margin-bottom:30px;
+    width:210px;
+    margin-bottom:25px;
+    animation:entrada .8s ease;
+}
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 .subtitulo{
