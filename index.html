@@ -370,9 +370,16 @@ section{
 }
 
 @media(max-width:700px){
-    .misionvision{
-        grid-template-columns:1fr;
-    }
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+}
+
 }
 footer{
     background:#222;
@@ -446,6 +453,21 @@ html{
         transform:scale(1);
     }
 
+}
+.nav-logo img{
+    width:65px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
     
 </style>
@@ -548,6 +570,12 @@ Solicitá asesoramiento
 
 <nav>
 
+<div class="nav-logo">
+<img src="logo-add.png.jpeg" alt="ADD">
+</div>
+
+<div class="nav-links">
+
 <a href="#nosotros">Nosotros</a>
     
 <a href="#servicios">Servicios</a>
@@ -559,6 +587,8 @@ Solicitá asesoramiento
 <a href="#noticias">Noticias</a>
 
 <a href="#contacto">Contacto</a>
+
+</div>
 
 </nav>
 
