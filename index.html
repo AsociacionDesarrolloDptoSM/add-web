@@ -265,7 +265,148 @@ nav a{
 }
 
 }
+/* ===========================
+   NUEVO HEADER ADD
+=========================== */
 
+header{
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffffff 0%,#f6fbff 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+    padding-top:110px;
+}
+
+/* Líneas decorativas */
+
+header::before{
+    content:"";
+    position:absolute;
+    width:900px;
+    height:900px;
+    border:2px solid rgba(0,155,219,.08);
+    border-radius:50%;
+    top:-500px;
+    right:-250px;
+    transform:rotate(20deg);
+}
+
+header::after{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border:2px solid rgba(0,184,107,.08);
+    border-radius:50%;
+    bottom:-450px;
+    left:-250px;
+}
+
+/* Barra superior */
+
+.topbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(12px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    z-index:999;
+}
+
+.logo-menu{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-menu img{
+    width:65px;
+}
+
+.logo-menu span{
+    color:#005b96;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#444;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#009BDB;
+}
+
+.btn-menu{
+    background:#009BDB;
+    color:white !important;
+    padding:12px 22px;
+    border-radius:40px;
+}
+
+.btn-menu:hover{
+    background:#005b96;
+}
+
+/* Hero */
+
+.hero{
+    max-width:900px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:62px;
+    color:#005b96;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:23px;
+}
+
+@media(max-width:900px){
+
+.topbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.menu{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+}
 </style>
 
 </head>
@@ -290,6 +431,31 @@ function cerrarImagen(){
 
 </script>
 
+
+<header>
+
+<div class="topbar">
+
+    <div class="logo-menu">
+        <img src="logo-add.png.jpeg" alt="Logo ADD">
+        <span>ADD</span>
+    </div>
+
+    <div class="menu">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#financiamiento">Financiamiento</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#contacto">Contacto</a>
+
+        <a class="btn-menu"
+           href="https://wa.me/5493401433139"
+           target="_blank">
+            Asesoramiento
+        </a>
+    </div>
+
+</div>
 
 <header>
 
@@ -332,21 +498,6 @@ Solicitá asesoramiento
 
 
 
-<nav>
-
-<a href="#nosotros">Nosotros</a>
-    
-<a href="#servicios">Servicios</a>
-
-<a href="#oficina">Nuestra sede</a>
-
-<a href="#financiamiento">Financiamiento</a>
-
-<a href="#noticias">Noticias</a>
-
-<a href="#contacto">Contacto</a>
-
-</nav>
 
 
 <section id="nosotros">
