@@ -113,12 +113,19 @@ header::after{
 .boton2{
     display:inline-block;
     margin-left:15px;
-    padding:15px 30px;
-    background:#00b86b;
+    padding:16px 34px;
+    background:linear-gradient(135deg,#00b86b,#009bdb);
     color:white;
     text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+    border-radius:40px;
+    font-weight:700;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,155,219,.25);
+}
+
+.boton2:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,155,219,.35);
 }
 
 .boton{
@@ -126,12 +133,19 @@ header::after{
     margin-top:30px;
     background:white;
     color:#005b96;
-    padding:15px 30px;
-    border-radius:30px;
+    padding:16px 34px;
+    border-radius:40px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:700;
+    border:2px solid #005b96;
+    transition:.3s;
 }
 
+.boton:hover{
+    background:#005b96;
+    color:white;
+    transform:translateY(-4px);
+}
 nav{
     position:sticky;
     top:0;
