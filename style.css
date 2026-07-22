@@ -212,13 +212,19 @@ nav{
 }
 
 .menu-btn{
-
     display:none;
-    font-size:32px;
-    cursor:pointer;
-    color:#005b96;
-    font-weight:bold;
+}
 
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
 
@@ -435,6 +441,22 @@ nav{
 
 .menu-btn{
     display:block;
+}
+
+.nav-links{
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    padding:20px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.nav-links.activo{
+    display:flex;
 }
 
 .nav-links{
