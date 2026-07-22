@@ -244,6 +244,14 @@ section{
 
 }
 
+.tarjetas{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
 .titulo{
 
     text-align:center;
