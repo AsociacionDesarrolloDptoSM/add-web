@@ -529,7 +529,46 @@ nav{
     align-items:center;
     justify-content:center;
 }
-    
+ .menu-btn{
+    display:none;
+    font-size:32px;
+    color:#005b96;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+@media (max-width:700px){
+
+nav{
+    padding:15px 20px;
+}
+
+.menu-btn{
+    display:block;
+}
+
+.nav-links{
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    padding:20px 0;
+}
+
+.nav-links.activo{
+    display:flex;
+}
+
+.nav-links a{
+    margin:15px 0;
+    font-size:18px;
+}
+
+}   
 </style>
 
 </head>
@@ -566,32 +605,34 @@ elementos.forEach(elemento=>{
 
 </script>
     
+<script>
+
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("activo");
+}
+
+</script>    
 <body>
     
 <nav>
 
 <div class="nav-logo">
-<img src="logo-add.png.jpeg" alt="ADD">
+    <img src="logo-add.png.jpeg" alt="ADD">
 </div>
 
-<div class="nav-links">
+<div class="menu-btn" onclick="toggleMenu()">
+    ☰
+</div>
 
-<a href="#nosotros">Nosotros</a>
-    
-<a href="#servicios">Servicios</a>
+<div class="nav-links" id="menu">
 
-<a href="#oficina">Nuestra sede</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#oficina">Nuestra sede</a>
+    <a href="#financiamiento">Financiamiento</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#contacto">Contacto</a>
 
-<a href="#financiamiento">Financiamiento</a>
-
-<a href="#noticias">Noticias</a>
-
-<a href="#contacto">Contacto</a>
-
-<a href="https://wa.me/5493401433139?text=Hola%20ADD,%20quiero%20solicitar%20un%20turno." target="_blank">
-Solicitar turno
-</a>
-    
 </div>
 
 </nav>
