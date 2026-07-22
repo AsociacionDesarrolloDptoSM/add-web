@@ -1,220 +1,56 @@
-<script>
+// ===============================
+// MENÚ HAMBURGUESA
+// ===============================
 
-const elementos = document.querySelectorAll(
-'.card, .mv-card, .galeria img, .banners img, .titulo'
-);
-
-elementos.forEach(elemento=>{
-    elemento.classList.add('animar');
-});
-
-
-const observer = new IntersectionObserver((entradas)=>{
-
-    entradas.forEach(entrada=>{
-
-        if(entrada.isIntersecting){
-            entrada.target.classList.add('visible');
-        }
-
-    });
-
-},{
-    threshold:0.15
-});
-
-
-elementos.forEach(elemento=>{
-    observer.observe(elemento);
-});
-
-</script>
-    
-<script>
-
-function toggleMenu(){
+function toggleMenu() {
     document.getElementById("menu").classList.toggle("activo");
 }
 
-</script>    
-<script>
 
-const elementos = document.querySelectorAll(
-'.card, .mv-card, .galeria img, .banners img, .titulo'
-);
+// ===============================
+// VISOR DE IMÁGENES
+// ===============================
 
-elementos.forEach(elemento=>{
-    elemento.classList.add('animar');
-});
+function abrirImagen(src) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = src;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
 
 
-const observer = new IntersectionObserver((entradas)=>{
+// ===============================
+// ANIMACIONES AL HACER SCROLL
+// ===============================
 
-    entradas.forEach(entrada=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-        if(entrada.isIntersecting){
-            entrada.target.classList.add('visible');
-        }
+    const elementos = document.querySelectorAll(
+        ".card, .mv-card, .galeria img, .banners img, .titulo"
+    );
 
+    elementos.forEach(elemento => {
+        elemento.classList.add("animar");
     });
 
-},{
-    threshold:0.15
-});
+    const observer = new IntersectionObserver((entradas) => {
 
+        entradas.forEach(entrada => {
 
-elementos.forEach(elemento=>{
-    observer.observe(elemento);
-});
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+            }
 
-</script>
-    
-<script>
+        });
 
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("activo");
-}
-
-</script>    
-<script>
-
-function abrirImagen(src){
-    document.getElementById("visor").style.display="flex";
-    document.getElementById("imagenGrande").src=src;
-}
-
-function cerrarImagen(){
-    document.getElementById("visor").style.display="none";
-}
-
-</script>
-<script>
-
-const elementos = document.querySelectorAll(
-'.card, .mv-card, .galeria img, .banners img, .titulo'
-);
-
-elementos.forEach(elemento=>{
-    elemento.classList.add('animar');
-});
-
-
-const observer = new IntersectionObserver((entradas)=>{
-
-    entradas.forEach(entrada=>{
-
-        if(entrada.isIntersecting){
-            entrada.target.classList.add('visible');
-        }
-
+    }, {
+        threshold: 0.15
     });
 
-},{
-    threshold:0.15
-});
-
-
-elementos.forEach(elemento=>{
-    observer.observe(elemento);
-});
-
-</script>
-    
-<script>
-
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("activo");
-}
-
-</script>    
-<script>
-
-const elementos = document.querySelectorAll(
-'.card, .mv-card, .galeria img, .banners img, .titulo'
-);
-
-elementos.forEach(elemento=>{
-    elemento.classList.add('animar');
-});
-
-
-const observer = new IntersectionObserver((entradas)=>{
-
-    entradas.forEach(entrada=>{
-
-        if(entrada.isIntersecting){
-            entrada.target.classList.add('visible');
-        }
-
+    elementos.forEach(elemento => {
+        observer.observe(elemento);
     });
 
-},{
-    threshold:0.15
 });
-
-
-elementos.forEach(elemento=>{
-    observer.observe(elemento);
-});
-
-</script>
-    
-<script>
-
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("activo");
-}
-
-</script>    
-<script>
-
-const elementos = document.querySelectorAll(
-'.card, .mv-card, .galeria img, .banners img, .titulo'
-);
-
-elementos.forEach(elemento=>{
-    elemento.classList.add('animar');
-});
-
-
-const observer = new IntersectionObserver((entradas)=>{
-
-    entradas.forEach(entrada=>{
-
-        if(entrada.isIntersecting){
-            entrada.target.classList.add('visible');
-        }
-
-    });
-
-},{
-    threshold:0.15
-});
-
-
-elementos.forEach(elemento=>{
-    observer.observe(elemento);
-});
-
-</script>
-    
-<script>
-
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("activo");
-}
-
-</script>    
-<script>
-
-function abrirImagen(src){
-    document.getElementById("visor").style.display="flex";
-    document.getElementById("imagenGrande").src=src;
-}
-
-function cerrarImagen(){
-    document.getElementById("visor").style.display="none";
-}
-
-</script>
-
