@@ -205,3 +205,16 @@ function toggleMenu(){
 }
 
 </script>    
+<script>
+
+function abrirImagen(src){
+    document.getElementById("visor").style.display="flex";
+    document.getElementById("imagenGrande").src=src;
+}
+
+function cerrarImagen(){
+    document.getElementById("visor").style.display="none";
+}
+
+</script>
+
