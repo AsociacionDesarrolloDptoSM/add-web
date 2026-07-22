@@ -245,9 +245,8 @@ section{
 }
 
 .tarjetas{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
     gap:30px;
     margin-top:40px;
 }
@@ -430,6 +429,7 @@ section{
 }
 
 .tarjetas{
+    grid-template-columns:1fr;
     gap:20px;
 }
 
